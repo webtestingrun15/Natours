@@ -14,13 +14,17 @@
   &__icon {
     font-size: 6rem;
     margin-bottom: 1.5rem;
-    background-image: linear-gradient(
-      to right,
-      $color-primary-light,
-      $color-primary-dark
-    );
-    -webkit-background-clip: text;
-    color: transparent;
+    color: $color-primary-light;
+
+    @supports ((-webkit-background-clip: text)) {
+      background-image: linear-gradient(
+        to right,
+        $color-primary-light,
+        $color-primary-dark
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
     @include respond(tab-port) {
       margin-bottom: 0;
