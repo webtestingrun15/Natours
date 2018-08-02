@@ -12,5 +12,11 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+
+    // Removes Width in Edge and IE since only images for object fit work in Edge
+    @supports (-ms-high-contrast: none) or (-ms-high-contrast: active) or
+      (-ms-ime-align: auto) {
+      width: initial;
+    }
   }
 }
