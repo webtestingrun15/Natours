@@ -171,9 +171,13 @@ body {
   overflow: hidden; }
   .bg-video__content {
     height: 100%;
-    width: 100%;
-    object-fit: cover; }
-    @supports (-ms-high-contrast: none) or (-ms-high-contrast: active) or (-ms-ime-align: auto) {
+    width: initial; }
+    @supports (object-fit: cover) {
+      .bg-video__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; } }
+    @supports (-ms-ime-align: auto) {
       .bg-video__content {
         width: initial; } }
 
@@ -253,6 +257,14 @@ body {
   -moz-perspective: 150rem;
   position: relative;
   height: 52rem; }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .card {
+      perspective: 0;
+      -moz-perspective: 0; } }
+  @supports (-ms-ime-align: auto) {
+    .card {
+      perspective: 0;
+      -moz-perspective: 0; } }
   .card__side {
     height: 52rem;
     transition: all 0.8s ease;
@@ -265,6 +277,9 @@ body {
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     top: 0;
     left: 0; }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      .card__side {
+        transition: all 0.2s ease; } }
     .card__side--front {
       background-color: #fff; }
     .card__side--back {

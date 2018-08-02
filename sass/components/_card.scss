@@ -5,6 +5,16 @@
   position: relative;
   height: 52rem;
 
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    perspective: 0;
+    -moz-perspective: 0;
+  }
+
+  @supports (-ms-ime-align: auto) {
+    perspective: 0;
+    -moz-perspective: 0;
+  }
+
   &__side {
     height: 52rem;
     transition: all 0.8s ease;
@@ -14,6 +24,10 @@
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      transition: all 0.2s ease;
+    }
 
     box-shadow: $shadow-1 rgba($color-black, 0.15);
 
