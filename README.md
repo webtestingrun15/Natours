@@ -14,7 +14,7 @@ Added CSS Responsive Images
 
 Added Art direction
 
-Made Book now pop responsive
+Made Book Now pop responsive
 
 ## Todo
 
