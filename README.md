@@ -1,6 +1,6 @@
 # Code Files for the Natours Project (Advanced CSS and Sass)
 
-[Link to Project Preview](http://htmlpreview.github.io/?https://github.com/webtestingrun15/Natours/blob/master/index.html)
+[Link to Project Preview](https://webtestingrun15.github.io/Natours/)
 
 ## Code Structure and Architecture
 
